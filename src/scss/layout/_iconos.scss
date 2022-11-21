@@ -1,0 +1,15 @@
+@include tablet {
+    .iconos-nosotros {
+        @include grid(3, 2rem); // DESDE el mixin
+    }
+}
+.icono {
+    text-align: center;
+    img {
+        height: 10rem; // REDUCE el tamaño de lso iconos
+    }
+    h3 {
+        text-transform: uppercase;
+        font-weight: $bold;
+    }
+}

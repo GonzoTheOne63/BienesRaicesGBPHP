@@ -1,0 +1,89 @@
+.derecha {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include tablet {
+        align-items: flex-end;
+    }
+    .dark-mode-boton {        
+        width: 3rem;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        filter: invert(100%); // ESTE elemento no acepta "color"
+        
+        &:hover {
+            cursor: pointer;
+        }
+        
+        @include tablet {
+            margin-top: 0;  
+        }
+    }
+}
+
+.barra {
+    display: flex; /* COLOCA los elementos uno al lado del otro */
+    flex-direction: column; /* MUEVE los elementos de arriba a abajo */
+    align-items: center;
+    padding-top: 3rem;
+    @include tablet {
+        flex-direction: row; /* COLOCA los elementos uno al lado del otro */
+        justify-content: space-between; /* ENVÍA los elementos a cada lado del espacio */  
+        align-items: flex-end;      
+    }
+}
+.navegacion {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    transition: visibility 0.3s ease-in-out, opacity 0.5s linear, height 0.5s linear;
+
+    @include tablet {
+        display: flex;
+        align-items: center;
+        opacity: 1;
+        visibility: visible;
+        height: auto;
+    }
+    
+
+    a {
+        color: $blanco;
+        text-decoration: none;
+        font-size: 2.2rem;
+        display: block; /* MUEVE los elementos al centro del espacio */
+        text-align: center;
+        
+        @include tablet {
+            margin-right: 2rem;
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+/* MENÚ de hamburguesa */
+.mobile-menu {
+    @include tablet {
+        display: none;
+        height: auto;
+        
+    }
+    img {
+        width: 5rem;
+    }
+}
+
+.mostrar {
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+}
+// AMBOS métodos son exactamente igual
+// @include tablet {
+//     .mobile-menu {
+//         display: none;
+//     }
+// }
+

@@ -1,0 +1,53 @@
+// PREFERENTEMENTE debo generar clases genéricas para no crear código repetido
+@include tablet {
+    .seccion-inferior {
+        display: grid; 
+        grid-template-columns: 2fr 1fr; // OTORGA 2 partes a un elemento y uno al otro
+        column-gap: 2rem;
+        h3 {
+            font-weight: $regular;
+        }
+    }       
+}
+.entrada-blog {
+    margin-bottom: 2rem; // AGREGA separación entre las entradas
+
+    @include tablet {
+        display: grid;
+        grid-template-columns: 1fr 2fr; // COLOCA la imagen a la izquierdfa del texto
+        column-gap: 2rem; 
+    }
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+.informacion-meta {
+    span {
+        color: $amarillo;        
+    }   
+}     
+.texto-entrada { // TODOS los enlaces tienen, por default, un display-inline
+    a { // PARA aplicales separacón con margin-top, primero debo cambiar a display: block
+        color: $negro;
+        margin-top: 2rem;
+        display: block;
+        @include tablet {
+            margin-top: -.8rem; // ALINEA el texto al borde de la imagen
+        }
+    }   
+    
+    h4 {
+        margin: 0;
+        line-height: 1.4;
+        &::after { // GENERA la línea decorativa
+            content: ''; 
+            display: block;
+            width: 15rem;
+            height: .5rem;
+            background-color: $verde;
+            margin-top: 1rem;
+        }
+    
+    }
+     
+}

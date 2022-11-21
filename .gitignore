@@ -1,0 +1,5 @@
+# No incluir node_modules
+*.node_modules/
+
+# Excluir package-lock.json
+*.package-lock-json/

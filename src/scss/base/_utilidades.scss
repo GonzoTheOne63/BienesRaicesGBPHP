@@ -1,0 +1,11 @@
+.seccion {
+    margin-top: calc($separacion / 2);
+    margin-bottom: calc($separacion / 2);
+}
+.contenido-centrado {
+    max-width: 80rem;
+}
+.alinear-derecha {
+    display: flex; // PERMITE modificar la posisción del o los elementos
+    justify-content: flex-end; // MUEVE el elemento al final
+}
