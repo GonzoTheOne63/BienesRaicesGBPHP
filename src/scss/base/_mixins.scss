@@ -10,13 +10,14 @@
         @content;
     }
 }
-  
+
 @mixin desktop {
     @media (min-width: #{$desktop}) {
         @content;
     }
 }
-@mixin grid($columnas, $espaciado ) { // AYUDA a ajustar los elementos
+@mixin grid($columnas, $espaciado) {
+    // AYUDA a ajustar los elementos
     display: grid;
     gap: $espaciado;
     grid-template-columns: repeat($columnas, 1fr);
@@ -29,12 +30,13 @@
     text-decoration: none;
     padding: 1rem 3rem;
     text-align: center;
+    text-transform: uppercase;
     margin-top: calc($separacion / 2);
     display: $display;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     border: none;
-
-    &:hover  {
+    
+    &:hover {
         background-color: darken($bgColor, 5);
         cursor: pointer;
     }
