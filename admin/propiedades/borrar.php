@@ -5,7 +5,7 @@
 
 <main class="contenedor">
     <!-- SEPARA otra sección -->
-    <h1>Crear</h1>
+    <h1>Borrar</h1>
 </main>
 
 <?php

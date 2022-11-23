@@ -18,7 +18,7 @@
             <div class="barra">
                 <!-- MANTIENE el contenido de la barra separada del resto -->
                 <a href="/">
-                    <img class="logotipo" src="build/img/logo.svg" alt="Logotipo de Bienes Raices">
+                    <img class="logotipo" src="/build/img/logo.svg" alt="Logotipo de Bienes Raices">
                 </a>
 
 

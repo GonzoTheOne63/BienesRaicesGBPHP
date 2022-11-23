@@ -6,6 +6,8 @@
 <main class="contenedor">
     <!-- SEPARA otra sección -->
     <h1>Crear</h1>
+    <a href="/admin" class="boton boton-verde">Clic para Volver</a>
+
 </main>
 
 <?php
