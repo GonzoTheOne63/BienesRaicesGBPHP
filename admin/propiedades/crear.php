@@ -4,7 +4,7 @@
     require '../../includes/config/database.php';
     $db = conectarDB();
 
-    /* var_dump($db); */
+    /* var_dump($db); // MUESTRA la conexión en pantalla */
     
     
     incluirTemplate('header');
